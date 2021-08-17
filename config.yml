@@ -1,0 +1,135 @@
+PetShop:
+  0:
+    name: "&cPuma"
+    entity: "CAT"
+    type: "DEFENDING"
+    health: 15.0
+    food: 50.0
+    cost: 15
+    respawn_cost: 5
+    damage: 1.2
+    display:
+      item: "SHIELD"
+      name: "&cPuma"
+      lore:
+      - ""
+      - "&8&l| &6T&fyp: &eOchránce"
+      - "&8&l| &6E&fntita: &eKočka"
+      - ""
+      - "&8&l| &6Ž&fivoty: &e15"
+      - "&8&l| &6J&fídlo: &e50"
+      - "&8&l| &6S&fíla: &e1.2"
+      - ""
+      - "&8&l| &6C&fena: &e15 coinů"
+      - "&8&l| &6R&fespawn: &e5 coinů"
+      - ""
+      - "&8&l| &7Klikni pro zakoupení"
+  1:
+    name: "&dDomací Kočka"
+    entity: "CAT"
+    type: "FOLLOWING"
+    health: 5.0
+    food: 30.0
+    cost: 5
+    respawn_cost: 2.5
+    display:
+      item: "EMERALD"
+      name: "&5Straka"
+      lore:
+      - ""
+      - "&8&l| &6T&fyp: &eMazlíček"
+      - "&8&l| &6E&fntita: &eKočka"
+      - ""
+      - "&8&l| &6Ž&fivoty: &e5"
+      - "&8&l| &6J&fídlo: &e30"
+      - ""
+      - "&8&l| &6C&fena: &e5 coinů"
+      - "&8&l| &6R&fespawn: &e2.5 coinů"
+      - ""
+      - "&8&l| &7Klikni pro zakoupení"
+  2:
+    name: "&6Leopard"
+    entity: "CAT"
+    type: "ATTACKING"
+    health: 25.0
+    food: 50
+    cost: 30
+    respawn_cost: 8
+    damage: 1.5
+    display:
+      item: "SWORD"
+      name: "&6Leopard"
+      lore:
+      - ""
+      - "&8&l| &6T&fyp: &eÚtočný"
+      - "&8&l| &6E&fntita: &eKočka"
+      - ""
+      - "&8&l| &6Ž&fivoty: &e25"
+      - "&8&l| &6J&fídlo: &e50"
+      - "&8&l| &6S&fíla: &e1.5"
+      - ""
+      - "&8&l| &6C&fena: &e30 coinů"
+      - "&8&l| &6R&fespawn: &e8 coinů"
+      - ""
+      - "&8&l| &7Klikni pro zakoupení"
+  3:
+    name: "&eDivočák"
+    entity: "PIG"
+    type: "DEFENDING"
+    health: 7
+    food: 20.0
+    cost: 3
+    respawn_cost: 1.3
+    damage: 0.6
+    display:
+      item: "SHIELD"
+      name: "&cPuma"
+      lore:
+      - ""
+      - "&8&l| &6T&fyp: &eOchránce"
+      - "&8&l| &6E&fntita: &ePrase"
+      - ""
+      - "&8&l| &6Ž&fivoty: &e7"
+      - "&8&l| &6J&fídlo: &e20"
+      - "&8&l| &6S&fíla: &e0.6"
+      - ""
+      - "&8&l| &6C&fena: &e3 coinů"
+      - "&8&l| &6R&fespawn: &e1.3 coinů"
+      - ""
+      - "&8&l| &7Klikni pro zakoupení"
+  4:
+    name: "&5Straka"
+    entity: "CHICKEN"
+    type: "PICKUPING"
+    health: 9
+    food: 15.0
+    cost: 30
+    respawn_cost: 8
+    display:
+      item: "CHEST"
+      name: "&5Straka"
+      lore:
+      - ""
+      - "&8&l| &6T&fyp: &eSběratel"
+      - "&8&l| &6E&fntita: &eSlepice"
+      - ""
+      - "&8&l| &6Ž&fivoty: &e9"
+      - "&8&l| &6J&fídlo: &e15"
+      - ""
+      - "&8&l| &6C&fena: &e30 coinů"
+      - "&8&l| &6R&fespawn: &e8 coinů"
+      - ""
+      - "&8&l| &7Klikni pro zakoupení"
+Msgs:
+  Selected:
+  - "&8&l| !#f4713c&lSystem!#df4d13 &8&l» &7Mazlíček vybrán."
+  Respawned:
+  - "&8&l| !#f4713c&lSystem!#df4d13 &8&l» &7Mazlíček byl oživen."
+  NoCoins:
+  - "&8&l| !#f4713c&lSystem!#df4d13 &8&l» &7Nemáš dostatek coinů pro oživení svého mazlíčka."
+  Called:
+  - "&8&l| !#f4713c&lSystem!#df4d13 &8&l» &7Mazlíček byl přivolán."
+  Agree-Respawn:
+  - "&8&l| !#f4713c&lSystem!#df4d13 &8&l» &7Znovu klikni pro potvzení zakoupení oživení tvého mazlíček za coiny."
+  AliveOrInvalid:
+  - "&8&l| !#f4713c&lSystem!#df4d13 &8&l» &7Mazlíček již je naživu nebo neexistuje."

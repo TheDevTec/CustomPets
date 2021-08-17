@@ -1,0 +1,6 @@
+name: CustomPets
+main: me.devtec.custompets.Loader
+author: DevTec
+version: 1.0
+api-version: 1.13
+depend: [TheAPI,CoinsManager]
