@@ -47,4 +47,6 @@ public interface Pet {
     public void setRespawnCost(double cost);
 
     public void openStats(Player player);
+
+    public void onCloseStats(Player player);
 }

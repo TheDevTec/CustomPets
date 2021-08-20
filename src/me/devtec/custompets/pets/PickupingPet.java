@@ -6,6 +6,9 @@ import me.devtec.custompets.pathfinders.PathfinderGoalFollowPlayer;
 import me.devtec.custompets.pets.constructors.Pet;
 import me.devtec.custompets.pets.constructors.Storable;
 import me.devtec.theapi.TheAPI;
+import me.devtec.theapi.guiapi.GUI;
+import me.devtec.theapi.scheduler.Scheduler;
+import me.devtec.theapi.scheduler.Tasker;
 import me.devtec.theapi.utils.json.Reader;
 import me.devtec.theapi.utils.json.Writer;
 import me.devtec.theapi.utils.reflections.Ref;
@@ -268,7 +271,43 @@ public class PickupingPet implements Pet, Storable {
             queue.add(item);
     }
 
+    private int opened;
+    private GUI stats;
+    private int updateTask;
+
     public void openStats(Player player) {
-        //TODO gui stats (eupdating)
+        ++opened;
+        if(opened==1) {
+            updateStats();
+        }
+        stats.open(player);
+    }
+
+    private void updateStats() {
+        if(stats==null){
+            stats=new GUI("&eInformace o tvém mazlíčkovi", 54) {
+                @Override
+                public void onClose(Player p){
+                    onCloseStats(p);
+                }
+            };
+            updateTask=new Tasker(){
+                @Override
+                public void run() {
+                    updateStats();
+                }
+            }.runRepeating(20, 20);
+            //TODO setup gui
+        }
+        //TODO update stats in gui
+    }
+
+    public void onCloseStats(Player player) {
+        --opened;
+        if(opened==0) {
+            stats.clear(); //clear cache from memory
+            stats=null;
+            Scheduler.cancelTask(updateTask);
+        }
     }
 }
